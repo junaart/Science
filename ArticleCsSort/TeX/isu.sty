@@ -1,0 +1,170 @@
+\let\iint=\undefined
+\let\iiint=\undefined
+%\RequirePackage{pscyr}
+\RequirePackage{amsmath,amsthm}
+\RequirePackage{amssymb} %,amsfont}
+\RequirePackage{graphicx}
+\RequirePackage{indentfirst, misccorr}
+\RequirePackage{psfrag}
+%\RequirePackage{srcltx}
+\DeclareMathOperator{\Hom}{Hom} \DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+%\RequirePackage{misccorr}
+
+\usepackage{wrapfig}
+
+\textwidth=12.5cm
+\textheight=20.0cm
+
+\newcommand{\avtore}[1]{\rule{0mm}{4mm}\hrule\rule{0mm}{2mm}\par{\ifnum\c@aqwe>1{\bfseries\protect\selectlanguage{russian}#1}\else{%
+\bfseries\selectlanguage{english}#1} 
+\fi }}
+
+\newcommand{\naze}[1]{\ifnum \c@aqwe >1{\rule{0mm}{4mm}\bfseries\selectlanguage{russian}#1}\else%ll;alz;laz
+{\rule{0mm}{4mm}\bfseries\selectlanguage{english}#1}\fi\vspace{2mm}}
+
+
+
+
+
+\providecommand{\abstractnameee}{\ABSTRActeee}
+
+\def\ABSTRActeee{{\ifnum \c@aqwe > 1 {\selectlanguage{russian}\bfseries Аннотация} \else {\selectlanguage{english}\bfseries Abstract}\fi}}
+
+\newenvironment{abstracte}{%
+			\footnotesize\vbox\bgroup\egroup\vspace{-2mm}%\protect\fontsize{7pt}{6pt}\selectfont%\baselineskip=5pt%
+%\footnotesize%\selectfont%
+%\fontsize{7}{6pt}\selectfont%\baselineskip=6pt
+\abstractnameee. \ifnum\c@aqwe > 1 \protect\selectlanguage{russian} \else
+\selectlanguage{english}\fi%
+}{\par}%\footnotesize%}%\egroup
+
+
+
+\providecommand{\keywordsnameee}{\Keywordseee}
+
+\def\Keywordseee{\ifnum \c@aqwe >1\selectlanguage{russian} Ключевые слова\else\selectlanguage{english} Keywords\fi}
+
+
+
+
+\newcommand{\keywordse}[1]{\footnotesize{\selectfont{\bfseries\keywordsnameee: }% 
+\ifnum \c@aqwe>1\selectlanguage{russian}\else\selectlanguage{english}\fi#1}%
+\par\normalsize
+}
+
+%\def\keywordsenamee{Keywords}%
+
+
+
+
+%\newcommand{\avtore}[1]{\ifnum \c@aqwe >1\rule{0mm}{4mm}\hrule\rule{0mm}{7mm} \bfseries\selectlanguage{russian} #1\else %\rule{0mm}{4mm}\hrule\rule{0mm}{7mm} \bfseries\selectlanguage{english} #1\par}
+
+
+\newcommand{\anne}[1]{{\selectlanguage{english}#1\par}}
+
+
+\let\include=\input
+
+\newtheorem{theorem}{{\ifnum \c@aqwe >1 {\fontsize{12pt}{14pt}\selectfont Theorem}\else{\fontsize{12pt}{14pt}\selectfont Теорема}\fi}}
+
+
+
+\newtheorem*{theorem*}{{\ifnum \c@aqwe >1  {\fontsize{12pt}{14pt}\selectfont Theorem}\else{\fontsize{12pt}{14pt}\selectfont Теорема}\fi}}
+
+
+
+
+\newtheorem{lemma}{{\ifnum \c@aqwe >1 {\fontsize{12pt}{14pt}\selectfont Lemma} \else{\fontsize{12pt}{14pt}\selectfont Лемма}\fi }}
+
+
+\newtheorem*{lemma*}{{\ifnum \c@aqwe >1 {\fontsize{12pt}{14pt}\selectfont Lemma} \else{\fontsize{12pt}{14pt}\selectfont Лемма}\fi }}
+
+
+
+\newtheorem{state}{\ifnum \c@aqwe >1{\fontsize{12pt}{14pt}\selectfont State}\else{\fontsize{12pt}{14pt}\selectfont Утверждение}\fi}
+
+
+\newtheorem{proposition}{\ifnum \c@aqwe >1{\fontsize{12pt}{14pt}\selectfont Proposition}\else{\fontsize{12pt}{14pt}\selectfont Предложение}\fi}
+
+
+
+\newtheorem{corollary}{\ifnum \c@aqwe >1  {\fontsize{12pt}{14pt}\selectfont Corollary}\else{\fontsize{12pt}{14pt}\selectfont Следствие}\fi}
+
+\newtheorem{remark}{\ifnum \c@aqwe >1 {\fontsize{12pt}{14pt}\selectfont Remark}             \else{\fontsize{12pt}{14pt}\selectfont Замечание}\fi}       \rmtheorem{remark}
+
+
+\newtheorem{problem}{{\fontsize{12pt}{14pt}\selectfont Задача}}         \rmtheorem{problem}
+\newtheorem{alg}{{\fontsize{12pt}{14pt}\selectfont Алгоритм}}           \rmtheorem{alg}
+
+\newtheorem{definition}{{\ifnum \c@aqwe >1{\fontsize{12pt}{14pt}\selectfont Definition}\else {\fontsize{12pt}{14pt}\selectfont Определение}\fi }} 
+
+%\rmtheorem{definition}
+
+\newtheorem{example}{{\fontsize{12pt}{14pt}\selectfont Пример}}         \rmtheorem{example}
+
+
+%\newtheorem{vvopr}{{\fontsize{12pt}{14pt}\selectfont Определениеsjhcjshjhs}}
+\newtheorem{vopr}{{\fontsize{12pt}{14pt}\selectfont Вопрос}}            \rmtheorem{vopr}   
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{theoreme}{{\fontsize{12pt}{14pt}\selectfont Theorem}}
+\newtheorem{lemmae}{{\fontsize{12pt}{14pt}\selectfont Lemma}}
+\newtheorem{corollarye}{{\fontsize{12pt}{14pt}\selectfont Corollary}}
+\newtheorem{remarke}{{\fontsize{12pt}{14pt}\selectfont Remark}}       \rmtheorem{remark}
+        \rmtheorem{problem}
+           \rmtheorem{alg}
+\newtheorem{definitione}{{\fontsize{12pt}{14pt}\selectfont Definition}} %\rmtheorem{definition}
+        \rmtheorem{example}
+\newtheorem{examplee}{{\fontsize{12pt}{14pt}\selectfont Example}}
+\newtheorem{propositione}{{\fontsize{12pt}{14pt}\selectfont Proposition}}
+
+\newtheorem{statee}{{\fontsize{12pt}{14pt}\selectfont State}}
+
+%%%%%%%%%%%%%%%
+
+\numberwithin{equation}{section}
+
+%\renewcommand{\keywordsname}{Ключевые слова}
+
+
+
+
+\renewenvironment{proof}[1][\ifnum \c@aqwe >1 Proof\else \proofname\fi]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep
+        \itshape
+    #1\@addpunct{.}]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+
+\providecommand{\proofname}{Proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\renewcommand{\kaplogo}{}
+
+\newcommand{\nazogl}[2]{\addcontentsline{toc}{abcdf}{#1#2}}
+
+\newcommand{\avtogl}[2]{\addcontentsline{toc}{abcdf}{%
+\ifnum\c@aqwe > 1 \protect\selectlanguage{english}%
+\else \protect\selectlanguage{russian}\fi{\bfseries #1.} #2}}
+
+\newcommand{\avtogle}[2]{\addcontentsline{toce}{abcdf}{\ifnum\c@aqwe > 1 \protect\selectlanguage{english}%
+\else \protect\selectlanguage{english}\fi{\bfseries #1.} #2}}
+
+
+
+
